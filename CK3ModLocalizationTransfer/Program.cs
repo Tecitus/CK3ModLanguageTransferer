@@ -55,7 +55,7 @@ namespace CK3ModLocalizationTransfer
             {
                 if (f.EndsWith(oldname))
                 {
-                    File.WriteAllText(f,File.ReadAllText(f, Encoding.UTF8).Replace(oldlang + ":", newlang + ":"));
+                    File.WriteAllText(f,File.ReadAllText(f).Replace(oldlang + ":", newlang + ":"),Encoding.UTF8);
                     File.Move(f, f.Replace(oldname, newname));
                 }
             }
